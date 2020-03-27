@@ -32,14 +32,14 @@ public class App
     		 //System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue()); 
     		 
     		 if(entry.getKey().contains(purchaseAmount)){
-    			 System.out.println("Amount after discout: "+ calculateDiscount(purchaseAmount,entry.getValue()));
+    			System.out.println("Amount after discout: "+ calculateDiscount(purchaseAmount,entry.getKey().getLow(),entry.getValue()));
     		 }
     		 
     	}
 	
     }
 
-	private static double calculateDiscount(double purchaseAmount, Double discount) {
-		return purchaseAmount - ((purchaseAmount*discount)/100);
+	private static double calculateDiscount(double purchaseAmount,double low, Double discount) {
+		return purchaseAmount - (((purchaseAmount - low )*discount)/100);
 	}
 }
