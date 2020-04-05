@@ -1,6 +1,6 @@
 package com.cdk.retail.model;
 
-public class Range
+public class Range 
 {
     private double low;
     private double high;
